@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Beat Maker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Beat Maker</h1>
+    </header>
+    <section>
+      <div class="sequencer">
+        <!-- Kick Track -->
+        <div class="kick-track">
+          <div class="icons kick-icon">
+            <svg
+              width="52"
+              height="52"
+              viewBox="0 0 52 52"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M28 47.9103C39.213 46.8998 48 37.4761 48 26C48 13.8497 38.1503 4 26 4C13.8497 4 4 13.8497 4 26C4 37.4761 12.787 46.8998 24 47.9103V37.6586C21.6696 36.8349 20 34.6125 20 32C20 28.6863 22.6863 26 26 26C29.3137 26 32 28.6863 32 32C32 34.6125 30.3304 36.8349 28 37.6586V47.9103ZM28 51.9242C41.4249 50.903 52 39.6865 52 26C52 11.6406 40.3594 0 26 0C11.6406 0 0 11.6406 0 26C0 39.6865 10.5751 50.903 24 51.9242V52H26H28V51.9242Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="select-menu">
+            <select name="kick-select" id="kick-select">
+              <option value="./sounds/kick-big.wav">Kick Big</option>
+              <option value="./sounds/kick-classic.wav">Kick Classic</option>
+              <option value="./sounds/kick-electro01.wav">
+                Kick Electro01
+              </option>
+              <option value="./sounds/kick-heavy.wav">Kick Heavy</option>
+              <option value="./sounds/kick-oldschool.wav">
+                Kick Old School
+              </option>
+              <option value="./sounds/kick-plain.wav">Kick Plain</option>
+              <option value="./sounds/kick-slapback.wav">Kick Slapback</option>
+              <option value="./sounds/kick-thump.wav">Kick Thump</option>
+              <option value="./sounds/kick-tight.wav">Kick Tight</option>
+              <option value="./sounds/kick-vinyl01.wav">Kick Vinyl01</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+
+          <div class="pad kick-pad b0"></div>
+          <div class="pad kick-pad b1"></div>
+          <div class="pad kick-pad b2"></div>
+          <div class="pad kick-pad b3"></div>
+          <div class="pad kick-pad b4"></div>
+          <div class="pad kick-pad b5"></div>
+          <div class="pad kick-pad b6"></div>
+          <div class="pad kick-pad b7"></div>
+          <div class="pad kick-pad b8"></div>
+          <div class="pad kick-pad b9"></div>
+          <div class="pad kick-pad b10"></div>
+          <div class="pad kick-pad b11"></div>
+          <div class="pad kick-pad b12"></div>
+          <div class="pad kick-pad b13"></div>
+          <div class="pad kick-pad b14"></div>
+          <button data-track="0" class="mute kick-volume">
+            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+        <!-- Hihat Track -->
+        <div class="hihat-track">
+          <div class="icons hihat-icon">
+            <svg
+              width="51"
+              height="42"
+              viewBox="0 0 51 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                d="M50 21C50 21.8292 49.5264 22.7583 48.3554 23.7354C47.19 24.7078 45.4439 25.6284 43.1984 26.421C38.7164 28.0029 32.4591 29 25.5 29C18.5409 29 12.2836 28.0029 7.8016 26.421C5.55607 25.6284 3.80997 24.7078 2.64461 23.7354C1.47362 22.7583 1 21.8292 1 21C1 20.1708 1.47362 19.2417 2.64461 18.2646C3.80997 17.2922 5.55607 16.3716 7.8016 15.579C12.2836 13.9971 18.5409 13 25.5 13C32.4591 13 38.7164 13.9971 43.1984 15.579C45.4439 16.3716 47.19 17.2922 48.3554 18.2646C49.5264 19.2417 50 20.1708 50 21Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="25"
+                y1="30"
+                x2="25"
+                y2="42"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="25"
+                y1="4.37114e-08"
+                x2="25"
+                y2="20.37"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <div class="select-menu">
+            <select name="hihat-select" id="hihat-select">
+              <option value="./sounds/hihat-808.wav">Hihat 808</option>
+              <option value="./sounds/hihat-acoustic01.wav">
+                Hihat Acoustic01
+              </option>
+              <option value="./sounds/hihat-acoustic02.wav">
+                Hihat Acoustic02
+              </option>
+              <option value="./sounds/hihat-analog.wav">Hihat Analog</option>
+              <option value="./sounds/hihat-digital.wav">Hihat Digital</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="pad hihat-pad b0"></div>
+          <div class="pad hihat-pad b1"></div>
+          <div class="pad hihat-pad b2"></div>
+          <div class="pad hihat-pad b3"></div>
+          <div class="pad hihat-pad b4"></div>
+          <div class="pad hihat-pad b5"></div>
+          <div class="pad hihat-pad b6"></div>
+          <div class="pad hihat-pad b7"></div>
+          <div class="pad hihat-pad b8"></div>
+          <div class="pad hihat-pad b9"></div>
+          <div class="pad hihat-pad b10"></div>
+          <div class="pad hihat-pad b11"></div>
+          <div class="pad hihat-pad b12"></div>
+          <div class="pad hihat-pad b13"></div>
+          <div class="pad hihat-pad b14"></div>
+          <button data-track="1" class="mute hihat-volume">
+            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+        <!-- hihat open -->
+        <div class="hihat-open-track">
+          <div class="icons hihat-open-icon">
+            <svg
+              width="51"
+              height="47"
+              viewBox="0 0 51 47"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M48.9999 24.5C48.5059 24.9127 47.9272 25.3096 47.2715 25.6881C47.4294 25.8028 47.5772 25.9176 47.7147 26.0324C48.7663 26.9099 49 27.5842 49 28C49 28.4158 48.7663 29.0901 47.7147 29.9676C46.6744 30.8357 45.0493 31.7072 42.8656 32.478C38.5161 34.0131 32.3766 35 25.5 35C18.6234 35 12.4839 34.0131 8.13442 32.478C5.95067 31.7072 4.32565 30.8357 3.28529 29.9676C2.23369 29.0901 2 28.4158 2 28C2 27.5842 2.23369 26.9099 3.28529 26.0324C3.42284 25.9176 3.5706 25.8028 3.72852 25.6881C3.07279 25.3096 2.49408 24.9127 2.00008 24.5C0.712131 25.5759 0 26.7586 0 28C0 32.9706 11.4167 37 25.5 37C39.5833 37 51 32.9706 51 28C51 26.7586 50.2879 25.5759 48.9999 24.5Z"
+                fill="white"
+              />
+              <path
+                d="M50 21C50 21.8292 49.5264 22.7583 48.3554 23.7354C47.19 24.7078 45.4439 25.6284 43.1984 26.421C38.7164 28.0029 32.4591 29 25.5 29C18.5409 29 12.2836 28.0029 7.8016 26.421C5.55607 25.6284 3.80997 24.7078 2.64461 23.7354C1.47362 22.7583 1 21.8292 1 21C1 20.1708 1.47362 19.2417 2.64461 18.2646C3.80997 17.2922 5.55607 16.3716 7.8016 15.579C12.2836 13.9971 18.5409 13 25.5 13C32.4591 13 38.7164 13.9971 43.1984 15.579C45.4439 16.3716 47.19 17.2922 48.3554 18.2646C49.5264 19.2417 50 20.1708 50 21Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="25"
+                y1="35"
+                x2="25"
+                y2="47"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="25"
+                y1="4.37114e-08"
+                x2="25"
+                y2="20.37"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <div class="select-menu">
+            <select name="hihat-open-select" id="hihat-open-select">
+              <option value="./sounds/openhat-808.wav">Openhat 808</option>
+              <option value="./sounds/openhat-acoustic01.wav">
+                Openhat Acoustic01
+              </option>
+              <option value="./sounds/openhat-analog.wav">
+                Openhat Analog
+              </option>
+              <option value="./sounds/openhat-slick.wav">Openhat Slick</option>
+              <option value="./sounds/openhat-tight.wav">Openhat Tight</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="pad hihat-open-pad b0"></div>
+          <div class="pad hihat-open-pad b1"></div>
+          <div class="pad hihat-open-pad b2"></div>
+          <div class="pad hihat-open-pad b3"></div>
+          <div class="pad hihat-open-pad b4"></div>
+          <div class="pad hihat-open-pad b5"></div>
+          <div class="pad hihat-open-pad b6"></div>
+          <div class="pad hihat-open-pad b7"></div>
+          <div class="pad hihat-open-pad b8"></div>
+          <div class="pad hihat-open-pad b9"></div>
+          <div class="pad hihat-open-pad b10"></div>
+          <div class="pad hihat-open-pad b11"></div>
+          <div class="pad hihat-open-pad b12"></div>
+          <div class="pad hihat-open-pad b13"></div>
+          <div class="pad hihat-open-pad b14"></div>
+          <button data-track="2" class="mute hihat-open-volume">
+            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+        <!-- Snare -->
+        <div class="snare-track">
+          <div class="icons snare-icon">
+            <svg
+              width="51"
+              height="38"
+              viewBox="0 0 51 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M46.4656 18.9998C45.9933 19.3442 45.4859 19.6765 44.9459 19.9954C44.9489 19.9974 44.952 19.9994 44.955 20.0015C45.4901 19.6838 46.0186 19.3561 46.5092 19.0317C46.4947 19.021 46.4802 19.0104 46.4656 18.9998ZM5.72146 19.9957C5.18141 19.6769 4.67398 19.3447 4.20164 19.0002C4.19319 19.0064 4.18475 19.0126 4.17631 19.0187C4.65797 19.3527 5.17842 19.6843 5.70915 20.004C5.71325 20.0012 5.71735 19.9985 5.72146 19.9957ZM48.8656 26.7284C48.9255 26.5223 48.9617 26.3374 48.9776 26.178V26.1947H50.6513C50.1729 32.7537 39.021 38 25.3339 38C11.6469 38 0.494939 32.7537 0.0166016 26.1947H1.71268C1.81428 27.1611 2.25102 28.163 3.0458 29.1508C4.12525 30.6907 5.95061 32.2787 8.88291 33.2301C13.1351 35.1187 18.9101 36.3111 25.3339 36.3111C32.132 36.3111 38.2034 34.9758 42.5124 32.8931C46.3406 31.0428 48.3832 28.8249 48.8656 26.7284Z"
+                fill="white"
+              />
+              <path
+                d="M49.6667 12.2444C49.6667 15.0249 47.3028 17.8315 42.8115 20.0022C38.3902 22.1392 32.212 23.4889 25.3333 23.4889C18.4547 23.4889 12.2765 22.1392 7.85513 20.0022C3.36391 17.8315 1 15.0249 1 12.2444C1 9.46395 3.36391 6.65742 7.85513 4.48666C12.2765 2.34969 18.4547 1 25.3333 1C32.212 1 38.3902 2.34969 42.8115 4.48666C47.3028 6.65742 49.6667 9.46395 49.6667 12.2444Z"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="10.2888"
+                y1="21.1111"
+                x2="10.2888"
+                y2="34.6391"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="0.75"
+                y1="12.6667"
+                x2="0.749999"
+                y2="26.1947"
+                stroke="white"
+                stroke-width="1.5"
+              />
+              <line
+                x1="26.3334"
+                y1="22.8"
+                x2="26.3334"
+                y2="37.1724"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="40.6888"
+                y1="21.1111"
+                x2="40.6888"
+                y2="34.6391"
+                stroke="white"
+                stroke-width="2"
+              />
+              <line
+                x1="49.7278"
+                y1="13.5111"
+                x2="49.7278"
+                y2="27.0391"
+                stroke="white"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+          <div class="select-menu">
+            <select name="snare-select" id="snare-select">
+              <option value="./sounds/snare-808.wav">Snare 808</option>
+              <option value="./sounds/snare-acoustic01.wav">
+                Snare Acoustic
+              </option>
+              <option value="./sounds/snare-brute.wav">Snare Brute</option>
+              <option value="./sounds/snare-electro.wav">Snare Electro</option>
+              <option value="./sounds/snare-lofi02.wav">Snare Lofi02</option>
+              <option value="./sounds/snare-tape.wav">Snare Tape</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="pad snare-pad b0"></div>
+          <div class="pad snare-pad b1"></div>
+          <div class="pad snare-pad b2"></div>
+          <div class="pad snare-pad b3"></div>
+          <div class="pad snare-pad b4"></div>
+          <div class="pad snare-pad b5"></div>
+          <div class="pad snare-pad b6"></div>
+          <div class="pad snare-pad b7"></div>
+          <div class="pad snare-pad b8"></div>
+          <div class="pad snare-pad b9"></div>
+          <div class="pad snare-pad b10"></div>
+          <div class="pad snare-pad b11"></div>
+          <div class="pad snare-pad b12"></div>
+          <div class="pad snare-pad b13"></div>
+          <div class="pad snare-pad b14"></div>
+          <button data-track="3" class="mute snare-volume">
+            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+        <!-- Clap  -->
+        <div class="clap-track">
+          <div class="icons clap-icon">
+            <svg
+              width="48"
+              height="51"
+              viewBox="0 0 48 51"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                d="M44.875 17.5761L47.3235 14.6303C48.4776 13.2407 48.1189 11.0282 46.5227 9.69917C45.9889 9.25452 45.382 8.9784 44.7689 8.84079C45.2526 8.12316 45.4895 7.27644 45.4093 6.40237C45.3171 5.4001 44.8405 4.49331 44.0671 3.84964C42.4727 2.52151 40.0923 2.7389 38.7626 4.33643L37.7486 5.55699C37.5283 4.95545 37.1669 4.39739 36.6406 3.95901C35.8537 3.30369 34.8769 3.02847 33.9297 3.10467C33.7273 1.99796 33.042 1.01049 32.033 0.460052C31.1503 -0.0204613 30.1318 -0.128935 29.1667 0.155249C28.202 0.439433 27.4057 1.08355 26.9242 1.96793L26.1655 3.36151C25.8328 2.81421 25.3701 2.33683 24.7682 2.00872C22.9459 1.01632 20.6523 1.69047 19.659 3.51705L15.7048 10.7835C14.299 10.4701 12.7731 10.7019 11.4806 11.5594C11.0251 11.8606 10.7147 12.3227 10.6063 12.8588C10.4975 13.3949 10.6036 13.9409 10.9059 14.3967L12.4609 16.746L12.323 16.9988L9.31917 14.3873C7.19047 12.2353 3.70968 12.2178 1.55994 14.3483C1.17119 14.7325 0.955769 15.2461 0.95353 15.7934C0.950843 16.3407 1.16089 16.8558 1.54516 17.2439L3.75895 19.482C6.71574 22.4713 7.24601 23.3763 6.68125 27.0259L6.0005 31.0744C5.78508 30.9632 5.53607 30.9359 5.30318 31.0049C5.06223 31.0757 4.85935 31.2393 4.73887 31.4603L0.11513 39.9576C-0.00489744 40.1786 -0.0322171 40.4377 0.0385454 40.6788C0.109308 40.92 0.273226 41.123 0.493574 41.2436L18.1819 50.8848C18.3226 50.961 18.478 51 18.6347 51C18.7243 51 18.8148 50.987 18.9025 50.961C19.1435 50.8902 19.3459 50.7261 19.4664 50.5051L19.8077 49.8776L20.7079 50.6275C20.8852 50.775 21.0993 50.8467 21.3129 50.8467C21.5844 50.8467 21.854 50.7306 22.0412 50.5051L28.2239 43.0666C28.3847 42.8734 28.4622 42.6246 28.4389 42.3741C28.4161 42.124 28.2947 41.8931 28.1021 41.7322L28.0175 41.6623L29.5926 39.7667C31.5009 39.8379 33.3551 39.023 34.5957 37.5304L46.6808 22.9904C47.8663 21.5636 47.6715 19.4367 46.245 18.2489C45.8344 17.9064 45.3632 17.6922 44.875 17.5761V17.5761ZM28.5876 2.87427C29.0807 1.96659 30.2209 1.62861 31.1274 2.12437C31.7289 2.45158 32.0926 3.09167 32.0939 3.77254C31.8198 3.9626 31.5592 4.17731 31.3361 4.44625L21.5266 16.2475L21.3994 16.0835L28.5876 2.87427ZM21.3224 4.42384C21.8163 3.51481 22.9562 3.17863 23.8631 3.67304C24.77 4.16834 25.1063 5.30911 24.6119 6.2168L24.5398 6.34992L20.1315 14.4505L19.0862 13.1036C18.6495 12.4442 18.0919 11.913 17.4645 11.5128L21.3224 4.42384ZM5.10522 18.1489L2.89099 15.9104C2.84038 15.8598 2.84083 15.7459 2.89233 15.6957C3.57398 15.0198 4.44686 14.6401 5.43843 14.6545C6.39865 14.6594 7.29886 15.0382 8.02574 15.7692L11.9701 19.2019C12.1868 19.3906 12.4771 19.469 12.7592 19.4193C13.0418 19.3682 13.2859 19.192 13.4225 18.9401L13.6258 18.5667C15.0303 20.9173 15.1024 22.0908 14.0491 24.9895L12.5971 28.8292C12.1953 28.5123 11.6145 28.5669 11.2853 28.9627L8.43285 32.3945L7.7606 32.0282L8.55063 27.328C9.2184 23.0164 8.41628 21.4964 5.10522 18.1489V18.1489ZM18.2567 48.7669L2.23128 40.032L5.92078 33.2519C6.00274 33.3685 6.10217 33.4734 6.23249 33.5446L7.08881 34.0117L5.10209 36.4017C4.9413 36.5949 4.86427 36.8441 4.88711 37.0943C4.90995 37.3448 5.03133 37.5757 5.22435 37.7361L18.3244 48.6427L18.2567 48.7669ZM21.1916 48.5647L7.16315 36.8849L12.0968 30.9502C12.1546 31.0802 12.2316 31.2026 12.3458 31.2976L25.9721 42.6421C26.0012 42.6663 26.0375 42.6771 26.0688 42.6977L21.1916 48.5647ZM45.2253 21.7783L33.1406 36.3179C32.1992 37.4511 30.7561 38.019 29.2916 37.8437C28.9692 37.8025 28.6552 37.9316 28.4501 38.1781L26.5624 40.4498L14.1382 30.1062L15.8239 25.6484C17.3144 21.5484 16.8222 19.902 14.2215 15.975L12.4842 13.3496C12.4444 13.2896 12.4668 13.178 12.5268 13.1381C13.3266 12.6069 14.286 12.42 15.2265 12.6118C16.1674 12.8028 16.9772 13.3487 17.5487 14.2076L19.5287 16.7603C19.5305 16.7625 19.5318 16.7643 19.5331 16.7666L20.7536 18.3403C20.9296 18.5672 21.1987 18.7016 21.4854 18.707C21.7581 18.6864 22.0457 18.5855 22.2293 18.3654L32.7917 5.65784C33.1115 5.27325 33.5616 5.03569 34.06 4.98996C34.563 4.9429 35.0449 5.09575 35.4291 5.41534C36.2219 6.0756 36.3307 7.25896 35.6728 8.05324L35.671 8.05503C35.671 8.05548 35.671 8.05593 35.6705 8.05637L30.2613 14.5644C29.9267 14.9669 29.9813 15.5639 30.3831 15.8988C30.7848 16.2341 31.3814 16.1798 31.7164 15.7764L37.1266 9.26797C37.1283 9.26617 37.1288 9.26393 37.1301 9.26214L40.2173 5.54802C40.8779 4.75285 42.062 4.64437 42.8552 5.30597C43.2399 5.62647 43.4773 6.07695 43.5229 6.57539C43.5686 7.07383 43.4172 7.56017 43.0975 7.94521L41.6182 9.72517C41.5909 9.7552 41.5573 9.77672 41.5308 9.80854C41.5152 9.82737 41.5116 9.85068 41.4972 9.8704L32.5355 20.6533C32.2009 21.0558 32.2556 21.6528 32.6578 21.9877C32.8347 22.1351 33.0492 22.2069 33.2628 22.2069C33.5338 22.2069 33.8034 22.0908 33.9906 21.8653L43.0572 10.9565C43.5619 10.4563 44.5642 10.5333 45.3108 11.1555C46.091 11.8055 46.3458 12.8418 45.867 13.4182L39.1764 21.4677L39.1146 21.5417C39.1142 21.5421 39.1142 21.5426 39.1133 21.543L37.0518 24.024C36.7172 24.4265 36.7718 25.0236 37.174 25.358C37.3509 25.5055 37.5655 25.5776 37.7791 25.5776C38.05 25.5776 38.3197 25.4615 38.5069 25.2361L40.5648 22.7604C40.5648 22.76 40.5657 22.76 40.5661 22.7595L42.9636 19.8962C43.4826 19.2727 44.4097 19.1862 45.034 19.7052C45.6579 20.2247 45.7434 21.1548 45.2253 21.7783V21.7783Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="select-menu">
+            <select name="clap-select" id="clap-select">
+              <option value="./sounds/clap-808.wav">Clap 808</option>
+              <option value="./sounds/clap-analog.wav">Clap Analog</option>
+              <option value="./sounds/clap-crushed.wav">Clap Crushed</option>
+              <option value="./sounds/clap-fat.wav">Clap Fat</option>
+              <option value="./sounds/clap-slapper.wav">Clap Slapper</option>
+              <option value="./sounds/clap-tape.wav">Clap Tape</option>
+            </select>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="pad clap-pad b0"></div>
+          <div class="pad clap-pad b1"></div>
+          <div class="pad clap-pad b2"></div>
+          <div class="pad clap-pad b3"></div>
+          <div class="pad clap-pad b4"></div>
+          <div class="pad clap-pad b5"></div>
+          <div class="pad clap-pad b6"></div>
+          <div class="pad clap-pad b7"></div>
+          <div class="pad clap-pad b8"></div>
+          <div class="pad clap-pad b9"></div>
+          <div class="pad clap-pad b10"></div>
+          <div class="pad clap-pad b11"></div>
+          <div class="pad clap-pad b12"></div>
+          <div class="pad clap-pad b13"></div>
+          <div class="pad clap-pad b14"></div>
+          <button data-track="4" class="mute clap-volume">
+            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+        <div class="btn-container">
+          <button class="play-btn">
+            <i class="fas fa-play"></i>
+            <i class="fas fa-stop"></i>
+          </button>
+          <button class="clear">CLEAR</button>
+        </div>
+        <div class="bpm">
+          <p>BPM:<span class="bpm-value">150</span></p>
+          <input
+            type="range"
+            class="bpm-slider"
+            max="300"
+            min="20"
+            value="150"
+          />
+        </div>
+      </div>
+    </section>
+    <audio src="./sounds/kick-heavy.wav" class="kick-sound"></audio>
+    <audio src="./sounds/snare-acoustic01.wav" class="snare-sound"></audio>
+    <audio src="./sounds/hihat-808.wav" class="hihat-sound"></audio>
+    <audio src="./sounds/openhat-analog.wav" class="hihat-open-sound"></audio>
+    <audio src="./sounds/clap-crushed.wav" class="clap-sound"></audio>
+    <script src="./app.js"></script>
+  </body>
+</html>
