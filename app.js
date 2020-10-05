@@ -14,6 +14,10 @@ class BeatMaker {
     this.stopBtnIcon = document.querySelector(".fa-stop");
     this.icons = document.querySelectorAll(".icons");
     this.clearBtn = document.querySelector(".clear");
+    this.par1Btn = document.querySelector(".part-1-toggle");
+    this.par2Btn = document.querySelector(".part-2-toggle");
+    this.part1 = document.querySelectorAll(".part-1");
+    this.part2 = document.querySelectorAll(".part-2");
     this.index = 0;
     this.bpm = 150;
     this.isPlaying = null;
@@ -23,8 +27,13 @@ class BeatMaker {
   }
 
   repeat() {
-    let step = this.index % 15;
+    let step = this.index % 14;
     const activePads = document.querySelectorAll(`.b${step}`);
+    if (step >= 7) {
+      this.changeToPart2();
+    } else {
+      this.changeToPart1();
+    }
     activePads.forEach((pad) => {
       pad.style.animation = "playTrack 0.3s alternate ease-in-out 2";
       if (pad.classList.contains("active")) {
@@ -79,7 +88,6 @@ class BeatMaker {
   changeTrack(e) {
     const selectionName = e.target.name;
     const selectionValue = e.target.value;
-    // console.log(`Name:${selectionName}  Value:${selectionValue}`);
     switch (selectionName) {
       case "kick-select":
         this.kickAudio.src = selectionValue;
@@ -179,6 +187,26 @@ class BeatMaker {
         break;
     }
   }
+  changeToPart1() {
+    beatMaker.par2Btn.classList.remove("active");
+    beatMaker.par1Btn.classList.add("active");
+    beatMaker.part1.forEach((div) => {
+      div.classList.add("activee");
+    });
+    beatMaker.part2.forEach((div) => {
+      div.classList.remove("activee");
+    });
+  }
+  changeToPart2() {
+    beatMaker.par1Btn.classList.remove("active");
+    beatMaker.par2Btn.classList.add("active");
+    beatMaker.part1.forEach((div) => {
+      div.classList.remove("activee");
+    });
+    beatMaker.part2.forEach((div) => {
+      div.classList.add("activee");
+    });
+  }
 }
 
 const beatMaker = new BeatMaker();
@@ -224,6 +252,14 @@ beatMaker.icons.forEach((div) => {
 
 beatMaker.clearBtn.addEventListener("click", () => {
   beatMaker.pads.forEach((pad) => {
-    pad.classList.remove("active")
+    pad.classList.remove("active");
   });
+});
+
+beatMaker.par1Btn.addEventListener("click", () => {
+  beatMaker.changeToPart1();
+});
+
+beatMaker.par2Btn.addEventListener("click", () => {
+  beatMaker.changeToPart2();
 });
