@@ -22,6 +22,7 @@ class BeatMaker {
     this.bpm = 150;
     this.isPlaying = null;
   }
+  // Activating the pads
   activePad() {
     this.classList.toggle("active");
   }
@@ -72,6 +73,7 @@ class BeatMaker {
       this.isPlaying = null;
     }
   }
+  // Updating the Play button
   updateBtn() {
     if (this.isPlaying) {
       this.playBtnIcon.style.display = "none";
@@ -106,6 +108,7 @@ class BeatMaker {
         break;
     }
   }
+  // Muting track and updating the icon
   mute(e) {
     const muteIndex = e.target.getAttribute("data-track");
     e.target.children[0].classList.toggle("active");
@@ -187,6 +190,7 @@ class BeatMaker {
         break;
     }
   }
+  // Mobile version parts shifting
   changeToPart1() {
     beatMaker.par2Btn.classList.remove("active");
     beatMaker.par1Btn.classList.add("active");
